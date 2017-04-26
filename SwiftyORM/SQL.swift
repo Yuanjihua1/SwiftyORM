@@ -1,0 +1,67 @@
+//
+//  SQL.swift
+//  SQLiteStORM
+//
+//  Created by Jonathan Guthrie on 2016-10-07.
+//
+//
+
+//import StORM
+//import SQLite
+//import PerfectLogger
+
+/// An extension to the main class providing SQL statement functions
+extension SQLiteStORM {
+
+	/// Execute Raw SQL statement
+	
+	public func sqlExec(_ statement: String) throws {
+		do {
+			try execStatement(statement)
+		} catch {
+			//LogFIle.error("Error msg: \(error)", //LogFIle: "./StORMlog.txt")
+			self.error = StORMError.error("\(error)")
+			throw error
+		}
+	}
+
+	/// Execute Raw SQL statement with parameter binding from the params array.
+	/// Returns an array of [SQLiteStmt]
+	@discardableResult
+	public func sql(_ statement: String, params: [String]) throws -> [SQLiteStmt] {
+		do {
+			return try exec(statement, params: params)
+		} catch {
+			//LogFIle.error("Error msg: \(error)", //LogFIle: "./StORMlog.txt")
+			self.error = StORMError.error("\(error)")
+			throw error
+		}
+	}
+
+	/// Execute Raw SQL statement with parameter binding from the params array.
+	/// Returns an ID column
+	@discardableResult
+	public func sqlAny(_ statement: String, params: [String]) throws -> Any {
+		do {
+			return try execReturnID(statement, params: params)
+		} catch {
+			//LogFIle.error("Error msg: \(error)", //LogFIle: "./StORMlog.txt")
+			self.error = StORMError.error("\(error)")
+			throw error
+		}
+	}
+
+	/// Execute Raw SQL statement with parameter binding from the params array.
+	/// Returns an array of [StORMRow]
+	@discardableResult
+	public func sqlRows(_ statement: String, params: [String]) throws -> [StORMRow] {
+		do {
+			return try execRows(statement, params: params)
+		} catch {
+			//LogFIle.error("Error msg: \(error)", //LogFIle: "./StORMlog.txt")
+			self.error = StORMError.error("\(error)")
+			throw error
+		}
+	}
+	
+}

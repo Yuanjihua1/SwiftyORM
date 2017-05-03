@@ -34,12 +34,12 @@
 
 /* Begin PBXFileReference section */
 		229403C71EBA2ACB004184F7 /* SQLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLite.swift; sourceTree = "<group>"; };
+		229403CB1EBA2C90004184F7 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		229403CD1EBA2C90004184F7 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		618A21681EAF08CC00DB2B6B /* SwiftyORM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyORM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		618A216B1EAF08CC00DB2B6B /* SwiftyORM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyORM.h; sourceTree = "<group>"; };
 		618A216C1EAF08CC00DB2B6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		618A217B1EAF095200DB2B6B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		618A21991EAF24AE00DB2B6B /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		618A219D1EAF24AE00DB2B6B /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		618A21A11EAF29FA00DB2B6B /* Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convenience.swift; sourceTree = "<group>"; };
 		618A21A21EAF29FA00DB2B6B /* Delete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delete.swift; sourceTree = "<group>"; };
 		618A21A31EAF29FA00DB2B6B /* Insert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Insert.swift; sourceTree = "<group>"; };
@@ -74,12 +74,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		229403C91EBA2C90004184F7 /* CocoaPods */ = {
+			isa = PBXGroup;
+			children = (
+				229403CA1EBA2C90004184F7 /* iphoneos */,
+				229403CC1EBA2C90004184F7 /* iphonesimulator */,
+			);
+			name = CocoaPods;
+			path = SwiftyORM/CocoaPods;
+			sourceTree = "<group>";
+		};
+		229403CA1EBA2C90004184F7 /* iphoneos */ = {
+			isa = PBXGroup;
+			children = (
+				229403CB1EBA2C90004184F7 /* module.modulemap */,
+			);
+			path = iphoneos;
+			sourceTree = "<group>";
+		};
+		229403CC1EBA2C90004184F7 /* iphonesimulator */ = {
+			isa = PBXGroup;
+			children = (
+				229403CD1EBA2C90004184F7 /* module.modulemap */,
+			);
+			path = iphonesimulator;
+			sourceTree = "<group>";
+		};
 		618A215E1EAF08CC00DB2B6B = {
 			isa = PBXGroup;
 			children = (
 				618A216A1EAF08CC00DB2B6B /* SwiftyORM */,
-				618A21981EAF24AE00DB2B6B /* iphoneos */,
-				618A219C1EAF24AE00DB2B6B /* iphonesimulator */,
+				229403C91EBA2C90004184F7 /* CocoaPods */,
 				618A21691EAF08CC00DB2B6B /* Products */,
 				618A217A1EAF095200DB2B6B /* Frameworks */,
 			);
@@ -110,24 +135,6 @@
 				618A217B1EAF095200DB2B6B /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		618A21981EAF24AE00DB2B6B /* iphoneos */ = {
-			isa = PBXGroup;
-			children = (
-				618A21991EAF24AE00DB2B6B /* module.modulemap */,
-			);
-			name = iphoneos;
-			path = SwiftyORM/iphoneos;
-			sourceTree = "<group>";
-		};
-		618A219C1EAF24AE00DB2B6B /* iphonesimulator */ = {
-			isa = PBXGroup;
-			children = (
-				618A219D1EAF24AE00DB2B6B /* module.modulemap */,
-			);
-			name = iphonesimulator;
-			path = SwiftyORM/iphonesimulator;
 			sourceTree = "<group>";
 		};
 		618A21A01EAF29EF00DB2B6B /* SQLiteORM */ = {
@@ -391,9 +398,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.loutongbao..SwiftyORM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/SwiftyORM";
-				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/SwiftyORM/iphoneos";
-				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/SwiftyORM/iphonesimulator";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/CocoaPods";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/CocoaPods/iphoneos";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/CocoaPods/iphonesimulator";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -420,9 +427,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.loutongbao..SwiftyORM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/SwiftyORM";
-				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/SwiftyORM/iphoneos";
-				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/SwiftyORM/iphonesimulator";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/CocoaPods";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/CocoaPods/iphoneos";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/CocoaPods/iphonesimulator";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_VERSION = 3.0;

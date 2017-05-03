@@ -14,7 +14,7 @@ s.source           = { :git => "https://github.com/Yuanjihua1/SwiftyORM.git", :t
 #s.social_media_url = 'https://twitter.com/stephencelis'
 
 s.module_name      = 'SwiftyORM'
-s.ios.deployment_target = "8.0"
+s.ios.deployment_target = "9.0"
 
 
 s.pod_target_xcconfig = {
@@ -22,15 +22,15 @@ s.pod_target_xcconfig = {
 }
 
 
-s.source_files = 'SwiftyORM/*.{c,h,m,swift}'
+s.source_files = ['SwiftyORM/*.{c,h,m,swift}' , 'CocoaPods/**/*' ]
 #s.exclude_files = 'Sources/**/Cipher.swift'
 #s.private_header_files = 'SwiftyORM/SQLiteObjc/*.h'
 
 s.library = 'sqlite3'
-s.preserve_paths = 'CocoaPods/**/*'
+#s.preserve_paths = 'CocoaPods/**/*'
 s.pod_target_xcconfig = {
-'SWIFT_INCLUDE_PATHS[sdk=iphoneos*]'           => '$(SRCROOT)/SQLite.swift/CocoaPods/iphoneos',
-'SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]'    => '$(SRCROOT)/SQLite.swift/CocoaPods/iphonesimulator'
+'SWIFT_INCLUDE_PATHS[sdk=iphoneos*]'           => '$(SRCROOT)/CocoaPods/iphoneos',
+'SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]'    => '$(SRCROOT)/CocoaPods/iphonesimulator'
 }
 
 

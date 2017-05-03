@@ -16,7 +16,7 @@ s.source           = { :git => "https://github.com/Yuanjihua1/SwiftyORM.git", :t
 s.module_name      = 'SwiftyORM'
 s.ios.deployment_target = "8.0"
 
-s.default_subspec  = 'standard'
+
 s.pod_target_xcconfig = {
 'SWIFT_VERSION' => '3.0',
 }

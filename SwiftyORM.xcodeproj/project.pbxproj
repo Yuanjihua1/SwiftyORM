@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		229403C81EBA2ACB004184F7 /* SQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229403C71EBA2ACB004184F7 /* SQLite.swift */; };
 		618A216D1EAF08CC00DB2B6B /* SwiftyORM.h in Headers */ = {isa = PBXBuildFile; fileRef = 618A216B1EAF08CC00DB2B6B /* SwiftyORM.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		618A217C1EAF095200DB2B6B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 618A217B1EAF095200DB2B6B /* libsqlite3.tbd */; };
-		618A218F1EAF1B3400DB2B6B /* SQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618A218E1EAF1B3400DB2B6B /* SQLite.swift */; };
 		618A21AA1EAF29FA00DB2B6B /* Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618A21A11EAF29FA00DB2B6B /* Convenience.swift */; };
 		618A21AB1EAF29FA00DB2B6B /* Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618A21A21EAF29FA00DB2B6B /* Delete.swift */; };
 		618A21AC1EAF29FA00DB2B6B /* Insert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618A21A31EAF29FA00DB2B6B /* Insert.swift */; };
@@ -33,11 +33,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		229403C71EBA2ACB004184F7 /* SQLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLite.swift; sourceTree = "<group>"; };
 		618A21681EAF08CC00DB2B6B /* SwiftyORM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyORM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		618A216B1EAF08CC00DB2B6B /* SwiftyORM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyORM.h; sourceTree = "<group>"; };
 		618A216C1EAF08CC00DB2B6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		618A217B1EAF095200DB2B6B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		618A218E1EAF1B3400DB2B6B /* SQLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLite.swift; sourceTree = "<group>"; };
 		618A21991EAF24AE00DB2B6B /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		618A219D1EAF24AE00DB2B6B /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		618A21A11EAF29FA00DB2B6B /* Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convenience.swift; sourceTree = "<group>"; };
@@ -99,7 +99,6 @@
 				618A216B1EAF08CC00DB2B6B /* SwiftyORM.h */,
 				618A21B31EAF2A1400DB2B6B /* StORM */,
 				618A21A01EAF29EF00DB2B6B /* SQLiteORM */,
-				618A218D1EAF1B3400DB2B6B /* SQLite */,
 				618A216C1EAF08CC00DB2B6B /* Info.plist */,
 			);
 			path = SwiftyORM;
@@ -111,14 +110,6 @@
 				618A217B1EAF095200DB2B6B /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		618A218D1EAF1B3400DB2B6B /* SQLite */ = {
-			isa = PBXGroup;
-			children = (
-				618A218E1EAF1B3400DB2B6B /* SQLite.swift */,
-			);
-			path = SQLite;
 			sourceTree = "<group>";
 		};
 		618A21981EAF24AE00DB2B6B /* iphoneos */ = {
@@ -158,6 +149,7 @@
 		618A21B31EAF2A1400DB2B6B /* StORM */ = {
 			isa = PBXGroup;
 			children = (
+				229403C71EBA2ACB004184F7 /* SQLite.swift */,
 				618A21B41EAF2A2400DB2B6B /* StORM.swift */,
 				618A21B51EAF2A2400DB2B6B /* StORMConnect.swift */,
 				618A21B61EAF2A2400DB2B6B /* StORMCursor.swift */,
@@ -254,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				618A21C01EAF2A2400DB2B6B /* StORMConnect.swift in Sources */,
+				229403C81EBA2ACB004184F7 /* SQLite.swift in Sources */,
 				618A21AC1EAF29FA00DB2B6B /* Insert.swift in Sources */,
 				618A21C81EAF2A2400DB2B6B /* StORMRow.swift in Sources */,
 				618A21C71EAF2A2400DB2B6B /* StORMProtocol.swift in Sources */,
@@ -267,7 +260,6 @@
 				618A21C61EAF2A2400DB2B6B /* StORMJoins.swift in Sources */,
 				618A21C91EAF2A2400DB2B6B /* StORMtResultSet.swift in Sources */,
 				618A21C51EAF2A2400DB2B6B /* StORMError.swift in Sources */,
-				618A218F1EAF1B3400DB2B6B /* SQLite.swift in Sources */,
 				618A21B11EAF29FA00DB2B6B /* SQLiteStORM.swift in Sources */,
 				618A21C11EAF2A2400DB2B6B /* StORMCursor.swift in Sources */,
 				618A21AA1EAF29FA00DB2B6B /* Convenience.swift in Sources */,
@@ -457,6 +449,7 @@
 				618A21721EAF08CC00DB2B6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

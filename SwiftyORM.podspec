@@ -21,18 +21,17 @@ s.pod_target_xcconfig = {
 'SWIFT_VERSION' => '3.0',
 }
 
-s.subspec 'standard' do |ss|
-ss.source_files = 'SwiftyORM/*.{c,h,m,swift}'
-#ss.exclude_files = 'Sources/**/Cipher.swift'
-#ss.private_header_files = 'SwiftyORM/SQLiteObjc/*.h'
 
-ss.library = 'sqlite3'
-ss.preserve_paths = 'CocoaPods/**/*'
-ss.pod_target_xcconfig = {
+s.source_files = 'SwiftyORM/*.{c,h,m,swift}'
+#s.exclude_files = 'Sources/**/Cipher.swift'
+#s.private_header_files = 'SwiftyORM/SQLiteObjc/*.h'
 
+s.library = 'sqlite3'
+s.preserve_paths = 'CocoaPods/**/*'
+s.pod_target_xcconfig = {
 'SWIFT_INCLUDE_PATHS[sdk=iphoneos*]'           => '$(SRCROOT)/SQLite.swift/CocoaPods/iphoneos',
 'SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]'    => '$(SRCROOT)/SQLite.swift/CocoaPods/iphonesimulator'
 }
-end
+
 
 end

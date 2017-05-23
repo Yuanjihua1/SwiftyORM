@@ -1,3 +1,3 @@
 # SwiftyORM
 
-copy for build on iOS from Perfect/StORM
+copy from Perfect/StORM ,  for build on iOS 
